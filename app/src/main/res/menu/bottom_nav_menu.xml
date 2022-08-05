@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/bottom_home_selector"
+        app:showAsAction="always"
+        android:enabled="true"
+        tools:title="Home"
+        tools:ignore="AlwaysShowAction" />
+    <item
+        android:id="@+id/searchFragment"
+        android:icon="@drawable/bottom_search_selector"
+        app:showAsAction="always"
+        tools:title="Search" />
+    <item
+        android:id="@+id/reelsFragment"
+        android:icon="@drawable/bottom_reels_selector"
+        app:showAsAction="always"
+        tools:title="Reels" />
+    <item
+        android:id="@+id/likeFragment"
+        android:icon="@drawable/bottom_like_selector"
+        app:showAsAction="always"
+        tools:title="Like" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/bottom_profile_selector"
+        app:showAsAction="always"
+        tools:title="Profile" />
+</menu>

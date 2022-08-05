@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ji_11/AndroidStudioProjects/Instagram/app/src/main/res/drawable/bg_indicator.xml" value="0.214" />
+        <entry key="..\:/Users/ji_11/AndroidStudioProjects/Instagram/app/src/main/res/drawable/bottom_home_selector.xml" value="0.214" />
+        <entry key="..\:/Users/ji_11/AndroidStudioProjects/Instagram/app/src/main/res/drawable/bottom_like_selector.xml" value="0.214" />
+        <entry key="..\:/Users/ji_11/AndroidStudioProjects/Instagram/app/src/main/res/drawable/bottom_profile_selector.xml" value="0.214" />
+        <entry key="..\:/Users/ji_11/AndroidStudioProjects/Instagram/app/src/main/res/drawable/bottom_reels_selector.xml" value="0.214" />
+        <entry key="..\:/Users/ji_11/AndroidStudioProjects/Instagram/app/src/main/res/drawable/bottom_search_selector.xml" value="0.214" />
+        <entry key="..\:/Users/ji_11/AndroidStudioProjects/Instagram/app/src/main/res/drawable/ic_bottom_home.xml" value="0.1" />
+        <entry key="..\:/Users/ji_11/AndroidStudioProjects/Instagram/app/src/main/res/drawable/ic_bottom_like.xml" value="0.1" />
+        <entry key="..\:/Users/ji_11/AndroidStudioProjects/Instagram/app/src/main/res/drawable/ic_bottom_profile.xml" value="0.1" />
+        <entry key="..\:/Users/ji_11/AndroidStudioProjects/Instagram/app/src/main/res/drawable/like_selector.xml" value="0.214" />
+        <entry key="..\:/Users/ji_11/AndroidStudioProjects/Instagram/app/src/main/res/layout/activity_main.xml" value="0.23385416666666667" />
+        <entry key="..\:/Users/ji_11/AndroidStudioProjects/Instagram/app/src/main/res/layout/fragment_home.xml" value="0.2484375" />
+        <entry key="..\:/Users/ji_11/AndroidStudioProjects/Instagram/app/src/main/res/layout/fragment_like.xml" value="0.19444444444444445" />
+        <entry key="..\:/Users/ji_11/AndroidStudioProjects/Instagram/app/src/main/res/layout/fragment_profile.xml" value="0.19444444444444445" />
+        <entry key="..\:/Users/ji_11/AndroidStudioProjects/Instagram/app/src/main/res/layout/fragment_reels.xml" value="0.19444444444444445" />
+        <entry key="..\:/Users/ji_11/AndroidStudioProjects/Instagram/app/src/main/res/layout/fragment_search.xml" value="0.19444444444444445" />
+        <entry key="..\:/Users/ji_11/AndroidStudioProjects/Instagram/app/src/main/res/layout/item_feed.xml" value="0.264" />
+        <entry key="..\:/Users/ji_11/AndroidStudioProjects/Instagram/app/src/main/res/layout/item_story.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/ji_11/AndroidStudioProjects/Instagram/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2484375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
