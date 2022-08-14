@@ -5,20 +5,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:id="@+id/signup_lang_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+        <TextView
+            android:id="@+id/signup_lang_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="한국어 (대한민국)"
+            android:textSize="14sp"
+            android:textColor="@color/gray"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/signup_lang_iv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_low_gray"
+            app:layout_constraintStart_toEndOf="@id/signup_lang_tv"/>
+
+    </LinearLayout>
+
     <ImageView
         android:id="@+id/signup_logo_iv"
-        android:layout_width="160dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="60dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="48dp"
         android:src="@drawable/ic_logo"
         app:layout_constraintBottom_toTopOf="@id/signup_text_ly"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+
     <LinearLayout
         android:id="@+id/signup_text_ly"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,18 +57,18 @@
 
         <EditText
             android:id="@+id/signup_id_et"
-            android:layout_width="240dp"
-            android:layout_height="36dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
             android:paddingStart="8dp"
             android:background="@drawable/bg_login_text"
-            android:hint="이메일"
+            android:hint="전화번호, 사용자 이름 또는 이메일"
             android:inputType="text"
             android:textSize="14sp"/>
 
         <EditText
             android:id="@+id/signup_name_et"
-            android:layout_width="240dp"
-            android:layout_height="36dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
             android:paddingStart="8dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/bg_login_text"
@@ -48,8 +78,8 @@
 
         <EditText
             android:id="@+id/signup_pw_et"
-            android:layout_width="240dp"
-            android:layout_height="36dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
             android:paddingStart="8dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/bg_login_text"
@@ -58,25 +88,40 @@
             android:textSize="14sp"/>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/signup_btn"
-            android:layout_width="240dp"
-            android:layout_height="36dp"
+            android:id="@+id/signup_before_btn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
             android:gravity="center"
             android:layout_marginTop="16dp"
-            android:background="@drawable/bg_login_btn"
+            android:background="@drawable/bg_login_before_btn"
             android:text="가입"
             android:textSize="14sp"
             android:textStyle="bold"
             android:textColor="@color/white"/>
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/signup_after_btn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_login_after_btn"
+            android:text="로그인"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
     </LinearLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:id="@+id/signup_login_ly"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/signup_text_ly"
+        android:background="@drawable/bg_login_signup"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" >
 
@@ -85,10 +130,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="계정이 있으신가요?"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:textSize="12sp"
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/signup_login_tv_2"
@@ -96,12 +139,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="로그인하기"
-            android:textSize="16sp"
+            android:textSize="12sp"
             android:textStyle="bold"
-            android:textColor="#1E88E5"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/signup_login_tv_1" />
+            android:textColor="#0A2E4E" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
