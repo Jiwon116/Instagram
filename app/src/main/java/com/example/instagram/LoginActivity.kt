@@ -12,7 +12,7 @@ import com.example.instagram.databinding.ActivityLoginBinding
 
 
 class LoginActivity : AppCompatActivity() {
-    lateinit var binding: ActivityLoginBinding
+    /*lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         Log.d("LoginActivity", "onCreate()")
@@ -115,5 +115,5 @@ class LoginActivity : AppCompatActivity() {
     override fun onDestroy() {
         Log.d("LoginActivity", "onDestroy()")
         super.onDestroy()
-    }
+    }*/
 }

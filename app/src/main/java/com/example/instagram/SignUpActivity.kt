@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.instagram.databinding.ActivitySignupBinding
 
 class SignUpActivity:AppCompatActivity() {
-    lateinit var binding: ActivitySignupBinding
+    /*lateinit var binding: ActivitySignupBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -188,5 +188,5 @@ class SignUpActivity:AppCompatActivity() {
     override fun onDestroy() {
         Log.d("SignUpActivity", "onDestroy()")
         super.onDestroy()
-    }
+    }*/
 }
