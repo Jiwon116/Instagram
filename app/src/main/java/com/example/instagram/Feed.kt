@@ -1,9 +1,9 @@
 package com.example.instagram
 
 data class Feed(
-    var profileImg: String,
+    var feedImg: Int,
     var nickname: String,
-    var like: Int?,
+    var like:Int?,
     var content: String,
-    var tag: String?,
+    var tag: ArrayList<String>?,
 )
