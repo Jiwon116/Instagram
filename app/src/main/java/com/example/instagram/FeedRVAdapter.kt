@@ -22,10 +22,9 @@ class FeedRVAdapter(private val feedList: ArrayList<Feed>):RecyclerView.Adapter<
         mItemClickListener = itemClickListener
     }
 
-    @SuppressLint("NotifyDataSetChanged")
     fun removeItem(position: Int) {
         feedList.removeAt(position)
-        notifyDataSetChanged()
+        notifyItemRemoved(position)
     }
 
     inner class FeedViewHolder(val binding: ItemFeedBinding): RecyclerView.ViewHolder(binding.root) {
