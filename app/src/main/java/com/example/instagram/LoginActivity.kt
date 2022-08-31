@@ -14,21 +14,22 @@ import com.example.instagram.databinding.ActivityLoginBinding
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.AuthErrorCause
 
-
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
 
-    var email = String
-    var nickname = String
+    private var email: String = ""
+    private var name: String = ""
+    private var profileImg: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Log.d("LoginActivity", "onCreate()")
-
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.loginIdEt.addTextChangedListener(object : TextWatcher {
+        // val keyHash = Utility.getKeyHash(this)
+        // Log.d("Hash", keyHash)
+
+        /*binding.loginEmailEt.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {}
             override fun onTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {}
             override fun afterTextChanged(editable: Editable) {
@@ -66,7 +67,7 @@ class LoginActivity : AppCompatActivity() {
 
         binding.loginAfterBtn.setOnClickListener {
             login()
-        }
+        }*/
 
         // 로그인 정보 확인
         UserApiClient.instance.accessTokenInfo { tokenInfo, error ->
@@ -76,6 +77,7 @@ class LoginActivity : AppCompatActivity() {
             else if (tokenInfo != null) {
                 // 카카오 로그인이 이미 되어있으면
                 Log.d(TAG, "로그인 유지")
+
                 startMainActivity()
             }
         }
@@ -116,7 +118,8 @@ class LoginActivity : AppCompatActivity() {
                 // 로그인에 성공하면
                 Log.d(TAG, "카카오톡 계정 연결 성공")
 
-                startMainActivity()
+                saveUserInfo()
+                startUserInfoActivity()
             }
         }
 
@@ -130,8 +133,8 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun login() {
-        if(binding.loginIdEt.text.toString().isEmpty()) {
+    /*private fun login() {
+        if(binding.loginEmailEt.text.toString().isEmpty()) {
             Toast.makeText(this, "이메일을 입력해주세요.", Toast.LENGTH_SHORT).show()
             return
         }
@@ -140,17 +143,44 @@ class LoginActivity : AppCompatActivity() {
             return
         }
 
-        val email: String = binding.loginIdEt.text.toString()
-        val pwd: String = binding.loginPwEt.text.toString()
+        email = binding.loginEmailEt.text.toString()
+        password= binding.loginPwEt.text.toString()
 
         val userDB = UserDatabase.getInstance(this)!!
-        val user = userDB.UserDao().getUser(email, pwd)
+        val user = userDB.UserDao().getUser(email)
 
         user?.let{
             Log.d("LOGINACT/GET_USER", "userId: ${user.id}, $user")
             saveUserIdx(this, user.id)
+            saveUserEmail(this, email)
+            saveUserPassword(this, password)
             startMainActivity()
         }
+    }*/
+
+    private fun saveUserInfo() {
+        // 사용자 정보 요청
+        UserApiClient.instance.me { kakaoUser, error ->
+            if (error != null) {    // 카카오 로그인이 되어있지 않으면
+                Log.e(TAG, "사용자 정보 요청 실패", error)
+            } else if (kakaoUser != null) {   // 카카오 로그인이 되어있으면
+                email = kakaoUser.kakaoAccount?.email.toString()
+                name = kakaoUser.kakaoAccount?.profile?.nickname.toString()
+                profileImg = kakaoUser.kakaoAccount?.profile?.profileImageUrl.toString()
+
+                saveUserEmail(this, email)
+                saveUserName(this, name)
+                saveUserProfileImg(this, profileImg)
+            }
+        }
+    }
+
+    private fun startUserInfoActivity() {
+        val intent = Intent(this, UserNicknameActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+        startActivity(intent)
+        finish()
     }
 
     private fun startMainActivity() {

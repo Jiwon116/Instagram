@@ -13,8 +13,8 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
 
-    private val feedList = ArrayList<Feed>()
-    private val feedRVAdapter = FeedRVAdapter(feedList)
+    private var feedList = ArrayList<Feed>()
+    private var feedRVAdapter = FeedRVAdapter(feedList)
 
     override fun onCreateView(
         inflater: LayoutInflater,

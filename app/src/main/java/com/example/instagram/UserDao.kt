@@ -12,6 +12,9 @@ interface UserDao {
     @Query("SELECT * FROM UserTable")
     fun getUsers(): List<User>
 
-    @Query("SELECT * FROM usertable WHERE email = :email AND password = :password")
-    fun getUser(email: String, password: String): User?
+    @Query("SELECT * FROM usertable WHERE email = :email")
+    fun getUser(email: String): User?
+
+    @Query("SELECT * FROM usertable WHERE nickname = :nickname")
+    fun getUserNickname(nickname: String): User?
 }

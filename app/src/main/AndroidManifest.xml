@@ -18,6 +18,9 @@
         android:theme="@style/Theme.Instagram"
         tools:targetApi="31">
         <activity android:name=".MainActivity" />
+        <activity android:name=".UserNicknameActivity" />
+        <activity android:name=".UserPasswordActivity" />
+        <activity android:name=".WelcomeActivity" />
 
         <activity
             android:name=".LoginActivity"
